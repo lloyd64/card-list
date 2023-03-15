@@ -5,7 +5,24 @@ import "team-card3/src/team-card3.js";
 
 class CardList extends LitElement {
   static properties = {
-    header: { type: String },
+    header: { type: String, 
+    reflect: true},
+    name: {
+      type: String,
+      reflect: true
+    },
+    fname: { type: String},
+    position: {
+      type: String,
+    },
+    top: { type: String},
+    imageDescription: { type: String},
+    accentColor: {
+      type: String,
+      reflect: true,
+      attribute: 'accent-color'
+    },
+    
   }
 
   static styles = css`
@@ -53,7 +70,7 @@ class CardList extends LitElement {
 
   constructor() {
     super();
-    this.header = 'My app';
+  
   }
 
   render() {
